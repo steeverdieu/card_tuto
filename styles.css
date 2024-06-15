@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300;400&family=Work+Sans:wght@300&display=swap');
+
+:root {
+  --color-1: #081F32;
+  --color-2: #F3B10E;
+  --color-3: #1DABF2;
+  --color-8: #46D68C;
+  --color-4: #FFFFFF;
+  --color-5: #EBECED;
+  --color-6: #A5ADBB;
+  --color-7: #798289;
+
+  --fs-h1: 50px;
+  --fs-h2: 28px;
+  --fs-body: 16px;
+
+  --card-wd: 344px;
+  --button-wd: 264px;
+  --button-hgt: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--color-5);
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--fs-body);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px;
+}
+.card {
+  position: relative;
+  
+  width: var(--card-wd);
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 40px 25px;
+
+  border-radius: 16px;
+  background-color: var(--color-4);
+}
+
+.card_header {
+  padding: 45px 20px;
+
+  border-bottom: 1px solid var(--color-5);
+}
+
+.card_price {
+  display: block;
+
+  font-size: var(--fs-h1);
+  font-family: 'DM Serif Display', sans-serif;
+}
+
+.card_price_date {
+  color: var(--color-6);
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--fs-body);
+}
+
+.card_title {
+  display: block;
+
+  padding: 5px 0;
+
+  color: var(--color-2);
+
+  font-size: var(--fs-h2);
+}
+
+.card_header_description {
+  display: block;
+  color: var(--color-6);
+}
+
+.card_body { padding: 42px 0 60px 0;}
+
+.card_list {
+  text-decoration: none;
+  list-style: none;
+}
+
+.card_list_item {
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 35px;
+
+  color: var(--color-6);
+}
+
+.card_list_item::before {
+  content: '';
+  display: block;
+  
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+
+  background-image: url(imgs/checkmark_1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card_button {
+  display: block;
+
+  width: var(--button-wd);
+  height: var(--button-hgt);
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 8px;
+  background-color: var(--color-5);
+  color: var(--color-7);
+
+  text-decoration: none;
+  text-align: center;
+  line-height: var(--button-hgt);
+}
+
+.card_two .card_title { color: var(--color-3); }
+
+.card_three .card_title { color: var(--color-8); }
+
+
+.card_two .card_list_item::before { background-image: url(../imgs/checkmark_2.svg); }
+.card_three .card_list_item::before { background-image: url(../imgs/checkmark_3.svg); }
+
+.card_two .card_button {
+  background-color: var(--color-4);
+  border: 1px solid var(--color-5);
+}
+
+.card_three .card_button {
+  background-color: var(--color-8);
+  color: var(--color-4);
+}
